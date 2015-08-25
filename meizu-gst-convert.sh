@@ -17,5 +17,5 @@ gst-launch-1.0 filesrc location="$filename" \
 	! filesink location="gst-$filename" decoder.! queue \
 	! audioconvert \
 	! audioresample ! 'audio/x-raw-int,channels=2,rate=44100' \
-	! lamemp3enc mode=stereo vbr=none bitrate=128 \
+	! lamemp3enc cbr=true bitrate=128 \
 	! mux.
