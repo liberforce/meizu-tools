@@ -7,8 +7,8 @@ height=240
 
 gst-launch-1.0 filesrc location="$filename" \
 	! decodebin name=decoder decoder.! queue \
-	! videorate ! videoscale \
-	! "video/x-raw,framerate=(fraction)${fps}/1,width=${width},height=${height}" \
+	! videorate \
+	! videoscale ! "video/x-raw,framerate=(fraction)${fps}/1,width=${width},height=${height}" \
 	! videoflip method=clockwise \
 	! avenc_mpeg4 bitrate=384000 max-bframes=0 \
 	! queue \
