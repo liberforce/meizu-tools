@@ -8,7 +8,7 @@ fi
 OUTFILE=$1
 
 gst-launch-1.0 videotestsrc num-buffers=200 \
-	! 'video/x-raw-yuv,framerate=(fraction)20/1,width=320,height=240' \
+	! 'video/x-raw,framerate=(fraction)20/1,width=320,height=240' \
 	! videoflip method=clockwise \
 	! xvidenc bitrate=384000 \
 	! queue \
