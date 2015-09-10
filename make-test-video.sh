@@ -7,7 +7,7 @@ then
 fi
 
 
-encoders="avenc_msmpeg4 avenc_msmpeg4v2 avenc_mpeg4 avenc_mpeg2video"
+encoders="avenc_msmpeg4 avenc_msmpeg4v2 avenc_mpeg4"
 label="$1"
 
 for encoder in $encoders
